@@ -1,0 +1,78 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #DDF0FF;
+  font-family: "Open Sans";
+}
+body div {
+  display: grid;
+  place-items: center;
+}
+body #formulaire {
+  flex: 1;
+}
+body #preview {
+  flex: 3;
+}
+
+#fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-shadow: 1px 1px 5px #6665DD;
+  border-radius: 10px;
+}
+#fields input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+  background: #DDF0FF;
+}
+#fields input[type=text], #fields input[type=tel], #fields input[type=email], #fields input[type=file] {
+  padding: 10px;
+}
+#fields input[type=text]:focus, #fields input[type=tel]:focus, #fields input[type=email]:focus, #fields input[type=file]:focus {
+  outline: none;
+}
+#fields input:last-of-type {
+  margin-bottom: 0;
+}
+
+#preview #card {
+  height: 290px;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  box-shadow: 1px 1px 5px #6665DD;
+}
+#preview #card #upper {
+  height: auto;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-bottom: 1px solid;
+}
+#preview #card #lower {
+  height: auto;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/*# sourceMappingURL=style.css.map */

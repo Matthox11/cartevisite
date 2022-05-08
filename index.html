@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="fr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Générateur de carte de visite</title>
+
+        <link rel="stylesheet" href="./style.css">
+
+        <script type="module" src="./script.js" defer></script>
+    </head>
+    <body>
+        <div id="formulaire">
+            <form id="fields">
+                <input class="field" id="nom" type="text" placeholder="NOM">
+                <input class="field" id="prenom" type="text" placeholder="PRÉNOM">
+                <input class="field" id="telephone" type="tel" placeholder="TELEPHONE">
+                <input class="field" id="email" type="email" placeholder="EMAIL">
+                <input class="field" type="color" value="#ffffff">
+            </form>
+        </div>
+        <div id="preview">
+            <div id="card">
+                <div id="upper">
+                    <h1><span class="nom">NOM</span> <span class="prenom">PRENOM</span></h1>
+                </div>
+                <div id="lower">
+                    <p class="telephone">TELEPHONE</p>
+                    <p class="email">EMAIL</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

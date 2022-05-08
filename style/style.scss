@@ -1,0 +1,92 @@
+@use "reset";
+@import "variables";
+@import "mixins";
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+
+    background: $backgroundColor;
+    font-family: "Open Sans";
+
+    div {
+        display: grid;
+        place-items: center;
+    }
+
+    #formulaire {
+        flex: 1;
+    }
+
+    #preview {
+        flex: 3;
+    }
+}
+
+#fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    box-shadow: 1px 1px 5px $shadowsColor;
+    border-radius: 10px;
+
+    input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 40px;
+        background: $backgroundColor;
+
+        &[type="text"], &[type="tel"], &[type="email"], &[type="file"] {
+            padding: 10px;
+
+            &:focus {
+                outline: none
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#preview {
+
+    #card {
+        height: calc(580px / 2);
+        width: calc(880px / 2);
+
+        display: flex;
+        flex-direction: column;
+
+        background: white;
+        padding: 20px   ;
+        box-shadow: 1px 1px 5px $shadowsColor;
+
+        #upper {
+            @include size($width: 100%);
+            flex: 1;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            border-bottom: 1px solid;
+        }
+
+        #lower {
+            @include size($width: 100%);
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+    }
+}
